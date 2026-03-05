@@ -1,0 +1,188 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* 1. THEME VARIABLES (Your "Environment Variables") */
+:root {
+  --bg-color: #0d1117;       /* Deep Charcoal */
+  --card-bg: #161b22;        /* Slightly lighter for sections */
+  --text-primary: #c9d1d9;   /* Soft white */
+  --text-secondary: #8b949e; /* Muted grey */
+  --accent-blue: #58a6ff;    /* Cloud Blue */
+  --success-green: #3fb950;  /* Status Green */
+  --border-color: #30363d;   /* Subtle borders */
+}
+
+/* 2. GLOBAL RESET & BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 3. NAVIGATION */
+nav {
+  margin-bottom: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-blue);
+}
+
+/* 4. HEADER & PROFILE */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-blue);
+  object-fit: cover;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+h2 {
+  color: var(--accent-blue);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.header-actions {
+  margin-top: 20px;
+}
+
+.resume-btn {
+  display: inline-block;
+  background-color: var(--accent-blue); /* Using our Cloud Blue variable */
+  color: #0d1117;                       /* Dark text for high contrast */
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.resume-btn:hover {
+  background-color: #79c0ff; /* A lighter blue on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.status-badge {
+  background-color: rgba(63, 185, 80, 0.15);
+  color: var(--success-green);
+  border: 1px solid var(--success-green);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* 5. SKILLS BADGES */
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.skill-list li {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--accent-blue);
+}
+
+/* 6. PROJECT CARDS */
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.repo-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 7. UTILITIES */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 40px 0;
+}
+
+section h3 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
