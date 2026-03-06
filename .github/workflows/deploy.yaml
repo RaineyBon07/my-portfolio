@@ -21,4 +21,5 @@ jobs:
         run: |
           # The --delete flag ensures that if you delete a file locally, 
           # it also gets deleted from your S3 bucket.
-          aws s3 sync . s3://your-unique-bucket-name --delete --exclude ".git*" --exclude ".github*"
+          aws s3 sync . s3://lorraine-portfolio-2026 --delete --exclude ".git*" --exclude ".github*"
+          
