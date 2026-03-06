@@ -72,6 +72,8 @@ nav {
   border-radius: 50%;
   border: 3px solid var(--accent-blue);
   object-fit: cover;
+  /* 50% is horizontal (center), 20% is vertical (closer to the top) */
+  object-position: 50% 20%; 
 }
 
 .header-title {
