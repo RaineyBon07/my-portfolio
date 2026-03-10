@@ -23,7 +23,7 @@ jobs:
       - name: Sync with S3
         run: |
           aws s3 sync . s3://lorraine-portfolio-2026 --delete --exclude ".git*" --exclude ".github*"
-          aws s3 cp s3://lorraine-portfolio-2026/resume.pdf s3://lorraine-portfolio-2026/resume.pdf --metadata-directive REPLACE --cache-control "no-cache, no-store, must-revalidate"
+          aws s3 cp s3://lorraine-portfolio-2026/resume.pdf s3://lorraine-portfolio-2026/resume.pdf --metadata-directive REPLACE --cache-control "no-cache, no-store, must-revalidate" --content-type "application/pdf"
 
       - name: Invalidate CloudFront
         run: |
