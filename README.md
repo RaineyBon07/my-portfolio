@@ -1,102 +1,136 @@
-My Portfolio
+# Cloud Portfolio Website
+Cloud-hosted portfolio deployed on AWS using S3, CloudFront, and CI/CD with GitHub Actions.
 
-A personal cloud-hosted portfolio showcasing my work, technical skills, and cloud engineering projects.
+![AWS](https://img.shields.io/badge/Platform-AWS-orange)
+![S3](https://img.shields.io/badge/Storage-Amazon_S3-green)
+![CloudFront](https://img.shields.io/badge/CDN-CloudFront-blue)
+![Monitoring](https://img.shields.io/badge/Monitoring-CloudWatch-yellow)
+![Alerts](https://img.shields.io/badge/Notifications-SNS-red)
+![CI/CD](https://img.shields.io/badge/Automation-GitHub_Actions-purple)
 
-This website is deployed on AWS using automated deployment via GitHub Actions, demonstrating practical experience with cloud infrastructure and CI/CD workflows.
+## Live Website
 
-Live Website:
+Primary URL (via CloudFront CDN)  
+https://d2ch139wvdmm4l.cloudfront.net/
+
+Direct S3 Website Endpoint (origin)  
 http://lorraine-portfolio-2026.s3-website.eu-north-1.amazonaws.com
 
-Project Overview
+---
 
-This project is a static portfolio website built using HTML and CSS and hosted on AWS S3 Static Website Hosting.
+# Project Overview
 
-The deployment process is automated using GitHub Actions, which pushes updates from the GitHub repository directly to the S3 bucket.
+This project is a **cloud-hosted personal portfolio website** designed to showcase my technical skills, cloud engineering projects, and professional background.
 
-The portfolio highlights:
-	•	My technical skills
-	•	Cloud and DevOps projects
-	•	Professional background
-	•	Contact information
+The site is built using **HTML and CSS** and deployed on **AWS S3 Static Website Hosting**. Deployment is automated using **GitHub Actions**, enabling continuous delivery from the GitHub repository to the AWS S3 bucket.
 
-The goal of this project is to demonstrate practical experience with cloud deployment, version control, and automated workflows.
+This project demonstrates practical experience with:
 
-Architecture
+- Cloud infrastructure deployment
+- Version control using Git
+- Continuous Integration and Continuous Deployment (CI/CD)
+- AWS monitoring and alerting
 
-The portfolio follows a simple cloud deployment architecture:
+---
+
+# Architecture
+
+The portfolio follows a cloud deployment architecture using AWS services and CI/CD automation.
 
 GitHub Repository
-↓
+│
+▼
 GitHub Actions CI/CD Pipeline
-↓
-AWS S3 Static Website Hosting
-↓
+│
+▼
+Amazon S3 (Static Website Hosting)
+│
+▼
+Amazon CloudFront (Global CDN + caching + HTTPS)
+│
+▼
 Public Portfolio Website
 
-When changes are pushed to the repository, the GitHub Actions workflow automatically deploys the updated website to the S3 bucket, ensuring the live site always reflects the latest version of the project.
+Monitoring and alerting are implemented using:
 
-Technologies Used
+- AWS CloudWatch for metrics and monitoring
+- AWS SNS for alert notifications
 
-HTML
-CSS
-AWS S3 (Static Website Hosting)
-AWS IAM (Access Management)
-GitHub (Version Control)
-GitHub Actions (CI/CD Automation)
-Visual Studio Code (Development Environment)
+---
 
-Future Enhancement:
-AWS CloudFront (Content Delivery Network)
+# Technologies Used
 
-Website Sections
+**Frontend**
+- HTML
+- CSS
 
-The portfolio website currently includes the following sections:
+**Cloud & Infrastructure**
+- AWS S3 (Static Website Hosting)
+- AWS CloudFront (Content Delivery Network)
+- AWS IAM (Access Management)
 
-About Me
-Overview of my background and interests in cloud and technology.
+**Monitoring & Alerts**
+- AWS CloudWatch
+- AWS SNS
 
-Skills
-A summary of technical skills and tools.
+**Development & CI/CD**
+- GitHub (Version Control)
+- GitHub Actions (Automated Deployment)
+- Visual Studio Code (Development Environment)
 
-Projects
+---
+
+# Website Sections
+
+The portfolio currently includes the following sections:
+
+## About Me
+Overview of my background and interest in cloud engineering and technology.
+
+## Skills
+A summary of technical skills, cloud tools, and technologies.
+
+## Projects
 A showcase of projects demonstrating cloud and DevOps experience.
 
-Contact
-Ways to connect professionally.
+## Contact
+Information on how to connect professionally.
 
-Current Project
+---
 
-Cloud Portfolio Website
+# Current Project
 
-This repository contains the infrastructure and source code for my personal portfolio website hosted on AWS.
+## Cloud Portfolio Website
 
-Future updates will include additional cloud engineering and DevOps projects as they are completed.
+This repository contains the source code and deployment configuration for my personal portfolio website hosted on AWS.
 
-Deployment
+The goal of this project is to demonstrate real-world experience with:
 
-The site is hosted using AWS S3 Static Website Hosting.
+- Cloud infrastructure
+- CI/CD automation
+- Static website deployment
+- Monitoring and alerting
 
-Deployment workflow:
-	1.	Code is pushed to the GitHub repository.
-	2.	GitHub Actions triggers an automated workflow.
-	3.	The workflow deploys the updated files to the AWS S3 bucket.
-	4.	The changes are reflected on the live website.
+Future updates will include additional cloud engineering and DevOps projects.
 
-Future Improvements
+---
 
-Planned improvements for this project include:
-	•	Adding additional cloud and DevOps projects
-	•	Implementing AWS CloudFront for improved performance and global content delivery
-	•	Adding HTTPS using AWS services
-	•	Enhancing the portfolio design and responsiveness
+# Deployment
 
-Author
+The website deployment process is fully automated.
 
-Lorraine Bonney
+### Deployment Workflow
 
-Cloud and DevOps enthusiast focused on building practical cloud solutions and automation workflows.
+1. Code is pushed to the GitHub repository
+2. GitHub Actions triggers an automated workflow
+3. The workflow deploys updated files to the AWS S3 bucket
+4. CloudFront distributes the updated content globally
+5. Monitoring and alerts are handled via CloudWatch and SNS
 
-Repository Structure
+---
+
+# Repository Structure
+
 my-portfolio
 │
 ├── index.html
@@ -106,6 +140,26 @@ my-portfolio
 │   └── icons
 │
 └── .github
-    └── workflows
-        └── deploy.yaml
+└── workflows
+└── deploy.yaml
+
+---
+
+# Future Improvements
+
+Planned enhancements for this project include:
+
+- Adding additional cloud and DevOps projects
+- Improving monitoring and alerting configuration
+- Enhancing website responsiveness and UI design
+- Expanding CI/CD workflows
+- Adding infrastructure automation using Infrastructure as Code (IaC)
+
+---
+
+# Author
+
+**Lorraine Bonney**
+
+Cloud and DevOps enthusiast focused on building practical cloud solutions, automation workflows, and scalable infrastructure.
         
